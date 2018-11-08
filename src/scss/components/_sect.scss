@@ -1,0 +1,26 @@
+.sect {
+  text-align: center;
+  @extend .text;
+
+  &__inner {
+    padding-top: 8.5%;
+  }
+
+  &__title {
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    font-weight: $font-weight-bold;
+  }
+
+  &__hr {
+    margin-bottom: 0.75rem;
+  }
+
+  &__text {
+    margin-bottom: 1.6rem;
+    font-size: 1rem;
+    font-weight: $font-weight-light;
+    line-height: 1.65;
+  }
+}

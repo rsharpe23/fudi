@@ -1,0 +1,29 @@
+.sect--first {
+  .sect__inner {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4.2rem;
+
+    @include __media-breakpoint-up("sm") {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  .sect__item {
+    flex-basis: 30.525%;
+  }
+
+  .sect__img-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 104px;
+    height: 104px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 1.1rem;
+    border: 2px solid $color-darkraven;
+    border-radius: 50%;
+  }
+}

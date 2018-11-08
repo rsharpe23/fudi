@@ -1,0 +1,8 @@
+.text {
+  letter-spacing: 0.75px;
+
+  &--inverted {
+    color: $color-white;
+    text-shadow: 0.5px 1px 40px rgba($color-black, 0.5);
+  }
+}

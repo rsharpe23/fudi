@@ -1,0 +1,58 @@
+.hero {
+  &__promo {
+    margin-bottom: 0.4rem;
+    font-family: $font-family-base;
+    font-size: 2.2rem;
+    font-style: italic;
+    font-weight: $font-weight-bold;
+
+    @include __media-breakpoint-up("sm") {
+      margin-left: 1.5rem;
+    }
+  }
+
+  &__text {
+    text-transform: uppercase;
+
+    &--lead {
+      margin-bottom: 1.9rem;
+      font-size: 3rem;
+      font-weight: $font-weight-bold;
+      letter-spacing: 5px;
+
+      @include __media-breakpoint-up("sm") {
+        font-size: 6.25rem;
+      }
+    }
+  }
+
+  &__btn {
+    @extend .btn;
+    margin-bottom: 2.45rem;
+    padding: 1.2rem 4.7rem 1.6rem 4.85rem;
+    color: $color-white;
+    font-size: 1.1rem;
+    font-weight: $font-weight-bold;
+    border-color: $color-white;
+    border-width: 3px;
+    border-radius: 3px;
+    @include __transition(("color", "background-color", "box-shadow"));
+
+    &:hover {
+      color: $color-primary;
+      background-color: $color-white;
+      text-decoration: underline;
+      text-shadow: 0.5px 1px 40px rgba($color-black, 0.5);
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 0.2rem rgba($color-primary, 0.5);
+    }
+  }
+
+  &__link {
+    @extend .link;
+    @extend .text--inverted;
+    font-weight: $font-weight-bold;
+  }
+}

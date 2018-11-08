@@ -1,0 +1,13 @@
+.link {
+  &:hover {
+    text-decoration: none;
+  }
+
+  &--inverted {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

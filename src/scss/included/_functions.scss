@@ -1,0 +1,36 @@
+@function __is-yiq($color) {
+  $r: red($color);
+  $g: green($color);
+  $b: blue($color);
+
+  $yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
+  $yiq-threshold: 150;
+
+  @return $yiq >= $yiq-threshold;
+}
+
+@function __str-empty($str) {
+  @return not $str or $str == "";
+}
+
+@function __str-replace($str, $search, $replace) {
+  $index: str-index($str, $search);
+
+  @if not $index {
+    @return $str;
+  }
+
+  $str-before: str-slice($str, 1, $index - 1);
+  $str-after: str-slice($str, $index + str-length($search));
+
+  @return $str-before + $replace + __str-replace($str-after, $search, $replace);
+}
+
+@function __rem($px) {
+  $total: $px / $font-size-base;
+  @return #{ $total }rem;
+}
+
+@function __get-breakpoint-value($breakpoint-name) {
+  @return map-get($grid-breakpoint-map, $breakpoint-name);
+}

@@ -5,11 +5,278 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>fudi</title>
+  <title>fudi.ru</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <div class="header__top">
+          <a href="#"><img src="img/logo.png" alt="Логотип компании"></a>
+
+          <div class="header__menu">
+            <nav class="nav header__nav">
+              <a class="nav__link" href="#">Log in</a>
+              <a class="nav__link" href="#">Sign up</a>
+            </nav>
   
+            <p class="header__phone">+38 (034) 272 43 00</p>
+            
+            <button type="button" class="header__btn">
+              <span class="icon icon--menu"></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="hero header__hero">
+          <p class="hero__promo">Find your Favourite</p>
+          <h1 class="hero__text hero__text--lead">Recipes</h1>
+          <a href="#" class="hero__btn">Get started</a>
+          <p class="hero__text">Or send us your own recipes
+            and <a class="hero__link" href="#">get rewarded</a>!</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="sect sect--first">
+    <div class="container">
+      <div class="sect__inner">
+        <div class="sect__item">
+          <div class="sect__img-wrap">
+            <img src="img/burger.png" alt="Бургер в круглой рамке">
+          </div>
+
+          <h3 class="sect__title">Get inspired</h3>
+          <hr class="hr hr--centered sect__hr">
+
+          <p class="sect__text">Lorem ipsum dolor sit amet, consectetur adipisc
+            Pellentesque vel enim a elit viverra elementuma. Aliquam erat volutpat.</p>
+        </div>
+
+        <div class="sect__item">
+          <div class="sect__img-wrap">
+            <img src="img/money.png" alt="Банкноты в круглой рамке">
+          </div>
+
+          <h3 class="sect__title">Get rewarded</h3>
+          <hr class="hr hr--centered sect__hr">
+
+          <p class="sect__text">Lorem ipsum dolor sit amet, consectetur adipisc
+            Pellentesque vel enim a elit viverra elementuma. Aliquam erat volutpat.</p>
+        </div>
+
+        <div class="sect__item">
+          <div class="sect__img-wrap">
+            <img src="img/cook.png" alt="Повар в круглой рамке">
+          </div>
+
+          <h3 class="sect__title">Get social</h3>
+          <hr class="hr hr--centered sect__hr">
+
+          <p class="sect__text">Lorem ipsum dolor sit amet, consectetur adipisc
+            Pellentesque vel enim a elit viverra elementuma. Aliquam erat volutpat.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sect sect--second">
+    <div class="container">
+      <div class="sect__inner">
+        <div class="sect__item">
+          <div class="sect__mobile-app"></div>
+        </div>
+
+        <div class="sect__item">
+          <h3 class="sect__title">Introducing the fudi app</h3>
+          <hr class="hr sect__hr">
+
+          <p class="sect__text">Morbi eget posuere dolor. Pellentesque cursus aliquet aliquet. Aeneanet
+            felis sit amet diam mollis ullamcorper. Nullam consequat sem a ante vest
+            ibulum tristique. Suspendisse tristique lacus ac mattis porta.</p>
+
+          <p class="sect__text">Vivamus ligula quam, vehicula non lacinia sed, faucibus sit amet libero. In
+            libero dui, eleifend eu nisi id, egestas fringilla odio. In varius quam a mas
+            sa hendrerit ullamcorper a eu justo. Suspendisse porta mattis convallis.
+            Aenean tempus ligula ac odio rhoncus, quis aliquam dolor accumsan.</p>
+
+          <p class="sect__text">Suspendisse aliquet felis consectetur libero congue, sed pulvinar diam
+            malesuada. Duis vehicula a nibh id hendrerit. Donec sit amet ultrices
+            ante, a mattis massa.</p>
+
+          <img src="img/app_store.png" alt="Логотип App Store" class="sect__img">
+          <img src="img/google_play.png" alt="Логотип Google Play" class="sect__img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sect sect--third">
+    <div class="container">
+      <div class="carousel" id="myCarousel">
+        <ul class="carousel__indicator-group">
+          <li class="carousel__indicator carousel__indicator--active"></li>
+          <li class="carousel__indicator"></li>
+          <li class="carousel__indicator"></li>
+        </ul>
+
+        <div class="carousel__item-group">
+          <div class="carousel__item carousel__item--active">
+            <div class="sect__customer"></div>
+            <p class="sect__comment">“I am so happy because I found this recipe,
+              and it just made my life easier.<br>Thanks so much for sharing!”</p>
+            <p class="sect__caption">- Michael Dawson, San Francisco, CA -</p>
+          </div>
+
+          <div class="carousel__item">
+            <div class="sect__customer"></div>
+            <p class="sect__comment">“I am so happy because I found this recipe,
+              and it just made my life easier.<br>Thanks so much for sharing!”</p>
+            <p class="sect__caption">- Michael Dawson, San Francisco, CA -</p>
+          </div>
+
+          <div class="carousel__item">
+            <div class="sect__customer"></div>
+            <p class="sect__comment">“I am so happy because I found this recipe,
+              and it just made my life easier.<br>Thanks so much for sharing!”</p>
+            <p class="sect__caption">- Michael Dawson, San Francisco, CA -</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sect sect--fourth">
+    <div class="sect__inner">
+      <h3 class="sect__title">Browse by cuisines</h3>
+      <hr class="hr hr--centered sect__hr">
+
+      <div class="sect__item-group sect__item-group--first">
+        <div class="sect__item">
+          <div class="sect__text-group">
+            <p class="sect__text sect__text--inverted sect__text--strong sect__text--embed">327 Recipes</p>
+            <p class="sect__text sect__text--inverted sect__text--strong sect__text--lead">Italian</p>
+          </div>
+        </div>
+
+        <div class="sect__item">
+          <div class="sect__text-group">
+            <p class="sect__text sect__text--inverted sect__text--strong sect__text--embed">856 Recipes</p>
+            <p class="sect__text sect__text--inverted sect__text--strong sect__text--lead">Indian</p>
+          </div>
+        </div>
+
+        <div class="sect__item">
+          <div class="sect__text-group">
+            <p class="sect__text sect__text--inverted sect__text--strong sect__text--embed">23 Recipes</p>
+            <p class="sect__text sect__text--inverted sect__text--strong sect__text--lead">French</p>
+          </div>
+        </div>
+
+        <div class="sect__item">
+          <div class="sect__text-group">
+            <p class="sect__text sect__text--inverted sect__text--strong sect__text--embed">174 Recipes</p>
+            <p class="sect__text sect__text--inverted sect__text--strong sect__text--lead">Steakhouse</p>
+          </div>
+        </div>
+
+        <div class="sect__item">
+          <div class="sect__text-group">
+            <p class="sect__text sect__text--inverted sect__text--strong sect__text--embed">731 Recipes</p>
+            <p class="sect__text sect__text--inverted sect__text--strong sect__text--lead">Seafood</p>
+          </div>
+        </div>
+
+        <div class="sect__item">
+          <div class="sect__text-group">
+            <p class="sect__text sect__text--inverted sect__text--strong sect__text--embed">237 Recipes</p>
+            <p class="sect__text sect__text--inverted sect__text--strong sect__text--lead">Sushi</p>
+          </div>
+        </div>
+
+        <div class="sect__item">
+          <div class="sect__text-group">
+            <p class="sect__text sect__text--inverted sect__text--strong sect__text--embed">529 Recipes</p>
+            <p class="sect__text sect__text--inverted sect__text--strong sect__text--lead">Mexican</p>
+          </div>
+        </div>
+
+        <div class="sect__item">
+          <div class="sect__text-group">
+            <p class="sect__text sect__text--inverted sect__text--strong sect__text--embed">145 Recipes</p>
+            <p class="sect__text sect__text--inverted sect__text--strong sect__text--lead">Chinese</p>
+          </div>
+        </div>
+
+        <div class="sect__item">
+          <div class="sect__text-group">
+            <p class="sect__text sect__text--inverted sect__text--strong sect__text--embed">327 Recipes</p>
+            <p class="sect__text sect__text--inverted sect__text--strong sect__text--lead">Pizza</p>
+          </div>
+        </div>
+
+        <div class="sect__item">
+          <div class="sect__text-group">
+            <p class="sect__text sect__text--inverted sect__text--strong sect__text--embed">1,437 Recipes</p>
+            <p class="sect__text sect__text--inverted sect__text--strong sect__text--lead">American</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="sect__item-group sect__item-group--second">
+        <div class="sect__item">
+          <div class="sect__text-group">
+            <div class="sect__text sect__text--strong sect__text--lead">23,567</div>
+            <div class="sect__text">Recipes Available</div>
+          </div>
+        </div>
+
+        <div class="sect__item">
+          <div class="sect__text-group">
+            <div class="sect__text sect__text--strong sect__text--lead">431,729</div>
+            <div class="sect__text">Active Users</div>
+          </div>
+        </div>
+
+        <div class="sect__item">
+          <div class="sect__text-group">
+            <div class="sect__text sect__text--strong sect__text--lead">892,173</div>
+            <div class="sect__text">Positive Reviews</div>
+          </div>
+        </div>
+
+        <div class="sect__item">
+          <div class="sect__text-group">
+            <div class="sect__text sect__text--strong sect__text--lead">56,581</div>
+            <div class="sect__text">Photos & Videos</div>
+          </div>
+        </div>
+
+        <div class="sect__item">
+          <div class="sect__text-group">
+            <div class="sect__text sect__text--strong sect__text--lead">3,182</div>
+            <div class="sect__text">Spices and Herbs</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <p class="footer__text">©<time datetime="2018">2018</time> 
+          Fudi. All Rights Reserved.</p>
+          
+        <p class="footer__text footer__text--lead">Design by: 
+          <a class="footer__link" href="http://www.bekades.com" target="_blank">www.bekades.com</a></p>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>

@@ -1,0 +1,31 @@
+$color-white:           #fff !default;
+$color-whitesmoke:      #f7f7f7 !default;
+$color-gainsboro:       #e1e1e1 !default;
+$color-gray:            #8b8b8b !default;
+$color-darkraven:       #221f1f !default;
+$color-black:           #000 !default;
+$color-salmon:          #f57365 !default;
+$color-matterhorn:      #493949 !default;
+
+$color-primary:         $color-salmon !default;
+
+$font-family-base:      "Times New Roman", sans-serif !default;
+$font-family-lato:      "Lato", sans-serif !default;
+
+$font-size-base:        1rem !default;
+$font-size-sm:          ($font-size-base * .875) !default;
+
+$font-weight-light:     300 !default;
+$font-weight-normal:    400 !default;
+$font-weight-bold:      700 !default;
+
+$grid-gutter-width:     15px !default;
+$grid-container-width:  1170px !default;
+
+$grid-breakpoint-map: (
+  "xs": 0,
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px
+) !default;
