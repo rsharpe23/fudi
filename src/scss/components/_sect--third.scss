@@ -1,60 +1,6 @@
 $sect--third__color-main: rgba($color-white, 0.35);
 
 .sect--third {
-  // position: relative;
-  // width: 100%;
-  // height: 462px;
-  // color: $sect--third__color-main;
-  // font-weight: $font-weight-light;
-  // background-color: $color-matterhorn;
-  // letter-spacing: 0;
-  // overflow: hidden; // HACK: изображение в ::after вылазит за пределы экрана
-
-  // &::after {
-  //   content: "";
-  //   position: absolute;
-  //   bottom: 0;
-  //   left: 110px;
-  //   width: 100%;
-  //   height: 100%;
-  //   background-image: url("../../img/housewife.png");
-  //   background-size: cover;
-  //   background-position: center;
-  // }
-
-  // .sect__customer {
-  //   display: inline-block;
-  //   position: relative;
-  //   width: 104px;
-  //   height: 104px;
-  //   margin-top: 7.15%;
-  //   margin-left: 0.25rem;
-  //   margin-bottom: 1.15rem;
-  //   background-image: url("../img/customer.png");
-
-  //   &::after {
-  //     content: "";
-  //     position: absolute;
-  //     top: -4px;
-  //     left: -4px;
-  //     width: 112px;
-  //     height: 112px;
-  //     border: 6px solid $sect--third__color-main;
-  //     border-radius: 50%;
-  //   }
-  // }
-
-  // .sect__comment {
-  //   margin-bottom: 1.5%;
-  //   font-size: 1.85rem;
-  //   line-height: 1.5;
-  // }
-
-  // .sect__caption {
-  //   font-size: 1.1rem;
-  //   font-style: italic;
-  // }
-
   display: none;
   position: relative;
   width: 100%;
@@ -73,16 +19,19 @@ $sect--third__color-main: rgba($color-white, 0.35);
   }
 
   &::after {
+    display: none;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../img/housewife.png");
+    background-size: cover;
+    background-position: center;
+
     @include __media-breakpoint-up("md") {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url("../../img/housewife.png");
-      background-size: cover;
-      background-position: center;
+      display: initial;
     }
 
     @include __media-breakpoint-up("lg") {
@@ -91,28 +40,32 @@ $sect--third__color-main: rgba($color-white, 0.35);
   }
 
   .sect__customer {
-    @include __media-breakpoint-up("sm") {
-      display: inline-block;
-      position: relative;
-      width: 104px;
-      height: 104px;
-      margin-top: 7.15%;
-      margin-left: 0.25rem;
-      margin-bottom: 1.15rem;
-      background-image: url("../img/customer.png");
-    }
+    display: inline-block;
+    position: relative;
+    width: 104px;
+    height: 104px;
+    margin-top: 7.15%;
+    margin-left: 0.25rem;
+    margin-bottom: 1.15rem;
+    background-image: url("../img/customer.png");
+
+    // @include __media-breakpoint-up("sm") {
+      
+    // }
 
     &::after {
-      @include __media-breakpoint-up("sm") {
-        content: "";
-        position: absolute;
-        top: -4px;
-        left: -4px;
-        width: 112px;
-        height: 112px;
-        border: 6px solid $sect--third__color-main;
-        border-radius: 50%;
-      }
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: -4px;
+      width: 112px;
+      height: 112px;
+      border: 6px solid $sect--third__color-main;
+      border-radius: 50%;
+
+      // @include __media-breakpoint-up("sm") {
+      //   display: initial;
+      // }
     }
   }
 
