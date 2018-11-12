@@ -100,12 +100,11 @@
       return;
     }
 
-    var $currentItem = this.itemsModel.current();
-    var $currentPoint = this.pointsModel.current();
-
     this.sliding = true;
     $newItem.addClass(typeClassName);
     $newItem[0].offsetWidth;
+
+    var $currentItem = this.itemsModel.current();
 
     $currentItem.addClass(dirClassName);
     $newItem.addClass(dirClassName);
@@ -118,6 +117,8 @@
       $newItem.removeClass([typeClassName, dirClassName].join(' ')).addClass(ACTIVE_CLASS_NAME);
       self.sliding = false;
     }, timeout);
+
+    var $currentPoint = this.pointsModel.current();
 
     $currentPoint.removeClass(ACTIVE_CLASS_NAME);
     $newPoint.addClass(ACTIVE_CLASS_NAME);
