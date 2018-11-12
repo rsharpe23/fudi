@@ -1,19 +1,20 @@
-$header__min-height: __get-breakpoint-value("md");
-$header__max-height: __get-breakpoint-value("lg");
+$header__min-height: grid__breakpoint-size("md");
+$header__max-height: grid__breakpoint-size("lg");
 
 .header {
   @extend .text;
-  @extend .text--inverted;
+  @extend .text.-type-invert;
   position: relative;
   width: 100%;
   height: 100vh;
-  // height: 884px;
+  // height: 880px;
+  background-color: $color-matterhorn;
   background-image: url("../img/fudi.jpg");
   background-position: center;
   background-size: cover;
   text-align: center;
 
-  @include __media-breakpoint-up("sm") {
+  @include grid__breakpoint-up("sm") {
     min-height: $header__min-height;
     max-height: $header__max-height;
   }
@@ -29,65 +30,66 @@ $header__max-height: __get-breakpoint-value("lg");
     background-repeat: repeat-x;
     background-image: url("../img/fudi_gradient.png");
 
-    @include __media-breakpoint-up("sm") {
+    @include grid__breakpoint-up("sm") {
       display: initial;
     }
   }
 
-  &__inner {
+  &-inner {
     position: relative;
     height: 100%;
     z-index: 1;
   }
 
-  &__top {
+  &-top {
     display: flex;
     justify-content: space-between;
     padding-top: 1.25rem;
   }
 
-  &__menu {
+  &-menu {
     display: flex;
+    position: relative;
     flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;
     padding-top: 0.5rem;
   }
 
-  &__nav {
-    order: 1;
-    flex-basis: 100%;
-    margin-top: 1rem;
+  &-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
     text-align: right;
 
-    @include __media-breakpoint-up("sm") {
-      order: 0;
-      flex-basis: auto;
-      margin-top: 0;
+    @include grid__breakpoint-up("md") {
+      display: block !important;
+      position: static;
     }
   }
 
-  &__phone {
+  &-phone {
     margin-left: 2.5rem;
   }
 
-  &__btn {
+  &-btn {
     margin: 0 0 0 1rem;
     padding: 0;
     border: 0;
-    cursor: pointer;
     background: transparent;
+    cursor: pointer;
+    outline: none;
 
-    @include __media-breakpoint-up("sm") {
+    @include grid__breakpoint-up("md") {
       display: none;
     }
   }
 
-  &__hero {
+  &-hero {
     padding-top: 22.5%;
   }
 
-  &__arrow {
+  &-arrow {
     display: none;
     position: absolute;
     left: 0;
@@ -95,7 +97,7 @@ $header__max-height: __get-breakpoint-value("lg");
     bottom: 40px;
     animation: ping-pong 2s infinite;
 
-    @include __media-breakpoint-up("sm") {
+    @include grid__breakpoint-up("sm") {
       display: inline-block;
     }
   }

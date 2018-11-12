@@ -12,34 +12,34 @@
 
 <body>
   <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <div class="header__top">
+    <div class="grid -type-gutter">
+      <div class="header-inner">
+        <div class="header-top">
           <a href="#"><img src="img/logo.png" alt="Логотип компании"></a>
 
-          <div class="header__menu">
-            <nav class="nav header__nav">
-              <a class="nav__link" href="#">Log in</a>
-              <a class="nav__link" href="#">Sign up</a>
+          <div class="header-menu">
+            <nav id="collapse" class="nav header-nav">
+              <a class="nav-link" href="#">Log in</a>
+              <a class="nav-link" href="#">Sign up</a>
             </nav>
 
-            <p class="header__phone">+38 (034) 272 43 00</p>
+            <p class="header-phone">+38 (034) 272 43 00</p>
 
-            <button type="button" class="header__btn">
-              <span class="icon icon--menu"></span>
+            <button type="button" class="header-btn js-collapse-toggle" data-target="#collapse">
+              <span class="icon -type-menu"></span>
             </button>
           </div>
         </div>
 
-        <div class="hero header__hero">
-          <p class="hero__promo">Find your Favourite</p>
-          <h1 class="hero__text hero__text--lead">Recipes</h1>
-          <a href="#" class="hero__btn">Get started</a>
-          <p class="hero__text">Or send us your own recipes
-            and <a class="hero__link" href="#">get rewarded</a>!</p>
+        <div class="hero header-hero">
+          <p class="hero-promo">Find your Favourite</p>
+          <h1 class="hero-text -type-lead">Recipes</h1>
+          <a href="#" class="hero-btn">Get started</a>
+          <p class="hero-text">Or send us your own recipes
+            and <a class="hero-link" href="#">get rewarded</a>!</p>
         </div>
 
-        <a href="#" class="header__arrow">
+        <a href="#anchorScroll" class="header-arrow js-anchor-toggle">
           <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
             <circle cx="25" cy="25" r="24" fill="white" fill-opacity="0.3" stroke="white" stroke-width="2" />
             <path d="M16 21.7734L24.7739 30.5473L33.5477 21.7734" stroke="white" stroke-width="3" />
@@ -49,224 +49,229 @@
     </div>
   </header>
 
-  <section class="sect sect--first">
-    <div class="container">
-      <div class="sect__inner">
-        <div class="sect__item">
-          <div class="sect__img-wrap">
+  <section id="anchorScroll" class="sect -type-offer">
+    <div class="grid -type-gutter">
+      <div class="sect-inner">
+        <div class="sect-item">
+          <div class="sect-img-wrap">
             <img src="img/burger.png" alt="Бургер в круглой рамке">
           </div>
 
-          <h3 class="sect__title">Get inspired</h3>
-          <hr class="hr hr--centered sect__hr">
+          <h3 class="sect-title">Get inspired</h3>
+          <hr class="hr sect-hr">
 
-          <p class="sect__text">Lorem ipsum dolor sit amet, consectetur adipisc
+          <p class="sect-text">Lorem ipsum dolor sit amet, consectetur adipisc
             Pellentesque vel enim a elit viverra elementuma. Aliquam erat volutpat.</p>
         </div>
 
-        <div class="sect__item">
-          <div class="sect__img-wrap">
+        <div class="sect-item">
+          <div class="sect-img-wrap">
             <img src="img/money.png" alt="Банкноты в круглой рамке">
           </div>
 
-          <h3 class="sect__title">Get rewarded</h3>
-          <hr class="hr hr--centered sect__hr">
+          <h3 class="sect-title">Get rewarded</h3>
+          <hr class="hr sect-hr">
 
-          <p class="sect__text">Lorem ipsum dolor sit amet, consectetur adipisc
+          <p class="sect-text">Lorem ipsum dolor sit amet, consectetur adipisc
             Pellentesque vel enim a elit viverra elementuma. Aliquam erat volutpat.</p>
         </div>
 
-        <div class="sect__item">
-          <div class="sect__img-wrap">
+        <div class="sect-item">
+          <div class="sect-img-wrap">
             <img src="img/cook.png" alt="Повар в круглой рамке">
           </div>
 
-          <h3 class="sect__title">Get social</h3>
-          <hr class="hr hr--centered sect__hr">
+          <h3 class="sect-title">Get social</h3>
+          <hr class="hr sect-hr">
 
-          <p class="sect__text">Lorem ipsum dolor sit amet, consectetur adipisc
+          <p class="sect-text">Lorem ipsum dolor sit amet, consectetur adipisc
             Pellentesque vel enim a elit viverra elementuma. Aliquam erat volutpat.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="sect sect--second">
-    <div class="container">
-      <div class="sect__inner">
-        <div class="sect__item">
-          <div class="sect__mobile-app"></div>
+  <section class="sect -type-app">
+    <div class="grid -type-gutter">
+      <div class="sect-inner">
+        <div class="sect-item">
+          <div class="sect-iphone"></div>
         </div>
 
-        <div class="sect__item">
-          <h3 class="sect__title">Introducing the fudi app</h3>
-          <hr class="hr sect__hr">
+        <div class="sect-item">
+          <h3 class="sect-title">Introducing the fudi app</h3>
+          <hr class="hr sect-hr">
 
-          <p class="sect__text">Morbi eget posuere dolor. Pellentesque cursus aliquet aliquet. Aeneanet
+          <p class="sect-text">Morbi eget posuere dolor. Pellentesque cursus aliquet aliquet. Aeneanet
             felis sit amet diam mollis ullamcorper. Nullam consequat sem a ante vest
             ibulum tristique. Suspendisse tristique lacus ac mattis porta.</p>
 
-          <p class="sect__text">Vivamus ligula quam, vehicula non lacinia sed, faucibus sit amet libero. In
+          <p class="sect-text">Vivamus ligula quam, vehicula non lacinia sed, faucibus sit amet libero. In
             libero dui, eleifend eu nisi id, egestas fringilla odio. In varius quam a mas
             sa hendrerit ullamcorper a eu justo. Suspendisse porta mattis convallis.
             Aenean tempus ligula ac odio rhoncus, quis aliquam dolor accumsan.</p>
 
-          <p class="sect__text">Suspendisse aliquet felis consectetur libero congue, sed pulvinar diam
+          <p class="sect-text">Suspendisse aliquet felis consectetur libero congue, sed pulvinar diam
             malesuada. Duis vehicula a nibh id hendrerit. Donec sit amet ultrices
             ante, a mattis massa.</p>
 
-          <img src="img/app_store.png" alt="Логотип App Store" class="sect__img">
-          <img src="img/google_play.png" alt="Логотип Google Play" class="sect__img">
+          <a href="#" class="sect-img-wrap">
+            <img src="img/app_store.png" alt="Логотип App Store">
+          </a>
+
+          <a href="#" class="sect-img-wrap">
+            <img src="img/google_play.png" alt="Логотип Google Play">
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="sect sect--third">
-    <div class="container">
-      <div class="carousel" id="myCarousel">
-        <ul class="carousel__indicator-group">
-          <li class="carousel__indicator carousel__indicator--active"></li>
-          <li class="carousel__indicator"></li>
-          <li class="carousel__indicator"></li>
+  <section class="sect -type-review">
+    <div class="grid -type-gutter">
+      <div class="carousel js-carousel">
+        <ul class="carousel-point-group">
+          <li class="carousel-point is-active" data-index="0"></li>
+          <li class="carousel-point" data-index="1"></li>
+          <li class="carousel-point" data-index="2"></li>
         </ul>
 
-        <div class="carousel__item-group">
-          <div class="carousel__item carousel__item--active">
-            <div class="sect__customer"></div>
-            <p class="sect__comment">“I am so happy because I found this recipe,
+        <div class="carousel-item-group">
+          <div class="carousel-item is-active">
+            <div class="sect-customer"></div>
+            <p class="sect-comment">“I am so happy because I found this recipe,
               and it just made my life easier.<br>Thanks so much for sharing!”</p>
-            <p class="sect__caption">- Michael Dawson, San Francisco, CA -</p>
+            <p class="sect-caption">- Michael Dawson, San Francisco, CA -</p>
           </div>
 
-          <div class="carousel__item">
-            <div class="sect__customer"></div>
-            <p class="sect__comment">“I am so happy because I found this recipe,
+          <div class="carousel-item">
+            <div class="sect-customer"></div>
+            <p class="sect-comment">“I am so happy because I found this recipe,
               and it just made my life easier.<br>Thanks so much for sharing!”</p>
-            <p class="sect__caption">- Michael Dawson, San Francisco, CA -</p>
+            <p class="sect-caption">- Michael Dawson, San Francisco, CA -</p>
           </div>
 
-          <div class="carousel__item">
-            <div class="sect__customer"></div>
-            <p class="sect__comment">“I am so happy because I found this recipe,
+          <div class="carousel-item">
+            <div class="sect-customer"></div>
+            <p class="sect-comment">“I am so happy because I found this recipe,
               and it just made my life easier.<br>Thanks so much for sharing!”</p>
-            <p class="sect__caption">- Michael Dawson, San Francisco, CA -</p>
+            <p class="sect-caption">- Michael Dawson, San Francisco, CA -</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="sect sect--fourth">
-    <div class="sect__inner">
-      <h3 class="sect__title">Browse by cuisines</h3>
-      <hr class="hr hr--centered sect__hr">
+  <section class="sect -type-cuisine">
+    <div class="sect-inner">
+      <h3 class="sect-title">Browse by cuisines</h3>
+      <hr class="hr sect-hr">
 
-      <div class="sect__item-group sect__item-group--first">
-        <div class="sect__item">
-          <div class="sect__text-group">
-            <p class="sect__text sect__text--inverted sect__text--strong sect__text--embed">327 Recipes</p>
-            <p class="sect__text sect__text--inverted sect__text--strong sect__text--lead">Italian</p>
+      <div class="sect-item-group">
+        <div class="sect-item">
+          <div class="sect-text-group">
+            <p class="sect-text -weight-bold -style-italic">327 Recipes</p>
+            <p class="sect-text -weight-bold -size-lg">Italian</p>
           </div>
         </div>
 
-        <div class="sect__item">
-          <div class="sect__text-group">
-            <p class="sect__text sect__text--inverted sect__text--strong sect__text--embed">856 Recipes</p>
-            <p class="sect__text sect__text--inverted sect__text--strong sect__text--lead">Indian</p>
+        <div class="sect-item">
+          <div class="sect-text-group">
+            <p class="sect-text -weight-bold -style-italic">856 Recipes</p>
+            <p class="sect-text -weight-bold -size-lg">Indian</p>
           </div>
         </div>
 
-        <div class="sect__item">
-          <div class="sect__text-group">
-            <p class="sect__text sect__text--inverted sect__text--strong sect__text--embed">23 Recipes</p>
-            <p class="sect__text sect__text--inverted sect__text--strong sect__text--lead">French</p>
+        <div class="sect-item">
+          <div class="sect-text-group">
+            <p class="sect-text -weight-bold -style-italic">23 Recipes</p>
+            <p class="sect-text -weight-bold -size-lg">French</p>
           </div>
         </div>
 
-        <div class="sect__item">
-          <div class="sect__text-group">
-            <p class="sect__text sect__text--inverted sect__text--strong sect__text--embed">174 Recipes</p>
-            <p class="sect__text sect__text--inverted sect__text--strong sect__text--lead">Steakhouse</p>
+        <div class="sect-item">
+          <div class="sect-text-group">
+            <p class="sect-text -weight-bold -style-italic">174 Recipes</p>
+            <p class="sect-text -weight-bold -size-lg">Steakhouse</p>
           </div>
         </div>
 
-        <div class="sect__item">
-          <div class="sect__text-group">
-            <p class="sect__text sect__text--inverted sect__text--strong sect__text--embed">731 Recipes</p>
-            <p class="sect__text sect__text--inverted sect__text--strong sect__text--lead">Seafood</p>
+        <div class="sect-item">
+          <div class="sect-text-group">
+            <p class="sect-text -weight-bold -style-italic">731 Recipes</p>
+            <p class="sect-text -weight-bold -size-lg">Seafood</p>
           </div>
         </div>
 
-        <div class="sect__item">
-          <div class="sect__text-group">
-            <p class="sect__text sect__text--inverted sect__text--strong sect__text--embed">237 Recipes</p>
-            <p class="sect__text sect__text--inverted sect__text--strong sect__text--lead">Sushi</p>
+        <div class="sect-item">
+          <div class="sect-text-group">
+            <p class="sect-text -weight-bold -style-italic">237 Recipes</p>
+            <p class="sect-text -weight-bold -size-lg">Sushi</p>
           </div>
         </div>
 
-        <div class="sect__item">
-          <div class="sect__text-group">
-            <p class="sect__text sect__text--inverted sect__text--strong sect__text--embed">529 Recipes</p>
-            <p class="sect__text sect__text--inverted sect__text--strong sect__text--lead">Mexican</p>
+        <div class="sect-item">
+          <div class="sect-text-group">
+            <p class="sect-text -weight-bold -style-italic">529 Recipes</p>
+            <p class="sect-text -weight-bold -size-lg">Mexican</p>
           </div>
         </div>
 
-        <div class="sect__item">
-          <div class="sect__text-group">
-            <p class="sect__text sect__text--inverted sect__text--strong sect__text--embed">145 Recipes</p>
-            <p class="sect__text sect__text--inverted sect__text--strong sect__text--lead">Chinese</p>
+        <div class="sect-item">
+          <div class="sect-text-group">
+            <p class="sect-text -weight-bold -style-italic">145 Recipes</p>
+            <p class="sect-text -weight-bold -size-lg">Chinese</p>
           </div>
         </div>
 
-        <div class="sect__item">
-          <div class="sect__text-group">
-            <p class="sect__text sect__text--inverted sect__text--strong sect__text--embed">327 Recipes</p>
-            <p class="sect__text sect__text--inverted sect__text--strong sect__text--lead">Pizza</p>
+        <div class="sect-item">
+          <div class="sect-text-group">
+            <p class="sect-text -weight-bold -style-italic">327 Recipes</p>
+            <p class="sect-text -weight-bold -size-lg">Pizza</p>
           </div>
         </div>
 
-        <div class="sect__item">
-          <div class="sect__text-group">
-            <p class="sect__text sect__text--inverted sect__text--strong sect__text--embed">1,437 Recipes</p>
-            <p class="sect__text sect__text--inverted sect__text--strong sect__text--lead">American</p>
+        <div class="sect-item">
+          <div class="sect-text-group">
+            <p class="sect-text -weight-bold -style-italic">1,437 Recipes</p>
+            <p class="sect-text -weight-bold -size-lg">American</p>
           </div>
         </div>
       </div>
 
-      <div class="sect__item-group sect__item-group--second">
-        <div class="sect__item">
-          <div class="sect__text-group">
-            <div class="sect__text sect__text--strong sect__text--lead">23,567</div>
-            <div class="sect__text">Recipes Available</div>
+      <div class="sect-item-group">
+        <div class="sect-item">
+          <div class="sect-text-group">
+            <div class="sect-text -weight-bold -size-lg">23,567</div>
+            <div class="sect-text">Recipes Available</div>
           </div>
         </div>
 
-        <div class="sect__item">
-          <div class="sect__text-group">
-            <div class="sect__text sect__text--strong sect__text--lead">431,729</div>
-            <div class="sect__text">Active Users</div>
+        <div class="sect-item">
+          <div class="sect-text-group">
+            <div class="sect-text -weight-bold -size-lg">431,729</div>
+            <div class="sect-text">Active Users</div>
           </div>
         </div>
 
-        <div class="sect__item">
-          <div class="sect__text-group">
-            <div class="sect__text sect__text--strong sect__text--lead">892,173</div>
-            <div class="sect__text">Positive Reviews</div>
+        <div class="sect-item">
+          <div class="sect-text-group">
+            <div class="sect-text -weight-bold -size-lg">892,173</div>
+            <div class="sect-text">Positive Reviews</div>
           </div>
         </div>
 
-        <div class="sect__item">
-          <div class="sect__text-group">
-            <div class="sect__text sect__text--strong sect__text--lead">56,581</div>
-            <div class="sect__text">Photos & Videos</div>
+        <div class="sect-item">
+          <div class="sect-text-group">
+            <div class="sect-text -weight-bold -size-lg">56,581</div>
+            <div class="sect-text">Photos & Videos</div>
           </div>
         </div>
 
-        <div class="sect__item">
-          <div class="sect__text-group">
-            <div class="sect__text sect__text--strong sect__text--lead">3,182</div>
-            <div class="sect__text">Spices and Herbs</div>
+        <div class="sect-item">
+          <div class="sect-text-group">
+            <div class="sect-text -weight-bold -size-lg">3,182</div>
+            <div class="sect-text">Spices and Herbs</div>
           </div>
         </div>
       </div>
@@ -274,16 +279,22 @@
   </section>
 
   <footer class="footer">
-    <div class="container">
-      <div class="footer__inner">
-        <p class="footer__text">©<time datetime="2018">2018</time>
+    <div class="grid -type-gutter">
+      <div class="footer-inner">
+        <p class="footer-text">©<time datetime="2018">2018</time>
           Fudi. All Rights Reserved.</p>
 
-        <p class="footer__text footer__text--lead">Design by:
-          <a class="footer__link" href="http://www.bekades.com" target="_blank">www.bekades.com</a></p>
+        <p class="footer-text -type-lead">Design by:
+          <a class="footer-link" href="http://www.bekades.com" target="_blank">www.bekades.com</a></p>
       </div>
     </div>
   </footer>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.util.js"></script>
+  <script src="js/jquery.anchor-scroll.js"></script>
+  <script src="js/jquery.collapse.js"></script>
+  <script src="js/jquery.carousel.js"></script>
 </body>
 
 </html>

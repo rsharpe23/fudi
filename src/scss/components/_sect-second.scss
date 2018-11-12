@@ -1,20 +1,20 @@
-.sect--second {
+.sect.-type-app {
   background-color: $color-whitesmoke;
 
-  .sect__inner {
-    @include __media-breakpoint-up("md") {
+  .sect-inner {
+    @include grid__breakpoint-up("md") {
       display: flex;
       justify-content: space-between;
     }
   }
 
-  .sect__item:first-child {
-    @include __media-breakpoint-up("md") {
+  .sect-item:first-child {
+    @include grid__breakpoint-up("md") {
       flex-basis: 45%;
     }
   }
 
-  .sect__mobile-app {
+  .sect-iphone {
     display: none;
     position: relative;
     width: 100%;
@@ -24,7 +24,7 @@
     background-position: bottom;
     background-repeat: no-repeat;
 
-    @include __media-breakpoint-up("md") {
+    @include grid__breakpoint-up("md") {
       display: block;
     }
 
@@ -41,38 +41,36 @@
     }
   }
 
-  .sect__item:last-child {
-    @include __media-breakpoint-up("md") {
+  .sect-item:last-child {
+    @include grid__breakpoint-up("md") {
       flex-basis: 45.815%;
       text-align: left;
     }
 
-    @include __media-breakpoint-up("lg") {
+    @include grid__breakpoint-up("lg") {
       padding-top: 6.8%;
       padding-bottom: 20.3%;
     }
   }
 
-  .sect__hr {
-    margin-left: auto;
-    margin-right: auto;
-
-    @include __media-breakpoint-up("md") {
+  .sect-hr {
+    @include grid__breakpoint-up("md") {
       margin-left: 0;
     }
   }
 
-  .sect__text {
-    @include __media-breakpoint-up("md") {
+  .sect-text {
+    @include grid__breakpoint-up("md") {
       margin-bottom: 4.7%;
     }
   }
 
-  .sect__img {
+  .sect-img-wrap {
+    display: inline-block;
     margin-bottom: 2.75rem;
 
-    + .sect__img {
-      @include __media-breakpoint-up("md") {
+    + .sect-img-wrap {
+      @include grid__breakpoint-up("md") {
         margin-left: 0.5rem;
       }
     }

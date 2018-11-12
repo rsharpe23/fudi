@@ -1,0 +1,18 @@
+.nav-link {
+  @extend .link.-type-invert;
+  @extend .text.-type-invert;
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+
+  @include grid__breakpoint-up("md") {
+    display: initial;
+  }
+
+  + .nav-link {
+    @include grid__breakpoint-up("md") {
+      margin-left: 1.76rem;
+    }
+  }
+}

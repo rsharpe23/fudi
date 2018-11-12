@@ -18,14 +18,3 @@ $font-size-sm:          ($font-size-base * .875) !default;
 $font-weight-light:     300 !default;
 $font-weight-normal:    400 !default;
 $font-weight-bold:      700 !default;
-
-$grid-gutter-width:     15px !default;
-$grid-container-width:  1170px !default;
-
-$grid-breakpoint-map: (
-  "xs": 0,
-  "sm": 576px,
-  "md": 768px,
-  "lg": 992px,
-  "xl": 1200px
-) !default;

@@ -1,22 +1,4 @@
-@mixin __media-breakpoint-up($breakpoint-name) {
-  $breakpoint-value: map-get($grid-breakpoint-map, $breakpoint-name);
-
-  @if not $breakpoint-value {
-    @error "Can`t find breakpoint value by key '#{ $breakpoint-name }'";
-  }
-
-  @if $breakpoint-value > 0 {
-    @media (min-width: $breakpoint-value) {
-      @content;
-    }
-  } @else if $breakpoint-value == 0 {
-    @content;   
-  } @else {
-    @error "Breakpoint value can`t been less then 0";
-  }
-}
-
-@mixin __transition($prop-list, $duration: 0.15s, $func: ease-in-out) {
+@mixin transition($prop-list, $duration: 0.15s, $func: ease-in-out) {
   $prop-value: null;
 
   @each $prop-name in $prop-list {
@@ -24,10 +6,10 @@
     $prop-value: append($prop-value, $total, comma);
   }
 
-  @include __set-prop("transition", $prop-value);
+  @include set-prop("transition", $prop-value);
 }
 
-@mixin __map-parse($map, $nest: null, $deep: false) {
+@mixin map-parse($map, $nest: null, $deep: false) {
   $prefix: if(__str-empty($nest), "", "#{ $nest }-");
 
   @each $key, $value in $map {
@@ -43,13 +25,13 @@
   }
 }
 
-@mixin __set-prop($prop-name, $prop-value) {
+@mixin set-prop($prop-name, $prop-value) {
   @if not __str-empty($prop-value) {
     #{ $prop-name }: $prop-value;
   }
 }
 
-@mixin __wrap-in($element) {
+@mixin wrap-in($element) {
   @if __str-empty($element) {
     @content;
   } @else {
@@ -59,7 +41,7 @@
   }
 }
 
-@mixin __border-radius($side, $radius) {
+@mixin border-radius($side, $radius) {
   $side-map: (
     "top": (
       "top-left",

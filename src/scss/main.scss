@@ -2,23 +2,23 @@
 @import "included/functions";
 @import "included/mixins";
 
-@import "common/fonts";
+@import "common/font";
 @import "common/animations";
 @import "common/custom";
 
-@import "components/container";
-@import "components/carousel";
+@import "components/grid";
 @import "components/text";
 @import "components/link";
 @import "components/icon";
 @import "components/button";
 @import "components/horizontal"; 
+@import "components/carousel";
 @import "components/header";
-@import "components/nav";
+@import "components/navigation";
 @import "components/hero";
 @import "components/sect";
-@import "components/sect--first";
-@import "components/sect--second";
-@import "components/sect--third";
-@import "components/sect--fourth";
+@import "components/sect-first";
+@import "components/sect-second";
+@import "components/sect-third";
+@import "components/sect-fourth";
 @import "components/footer";

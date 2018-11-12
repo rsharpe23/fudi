@@ -30,7 +30,3 @@
   $total: $px / $font-size-base;
   @return #{ $total }rem;
 }
-
-@function __get-breakpoint-value($breakpoint-name) {
-  @return map-get($grid-breakpoint-map, $breakpoint-name);
-}

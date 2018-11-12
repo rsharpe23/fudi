@@ -1,20 +1,20 @@
-$sect--third__color-main: rgba($color-white, 0.35);
+$sect-review__color-main: rgba($color-white, 0.35);
 
-.sect--third {
+.sect.-type-review {
   display: none;
   position: relative;
   width: 100%;
-  height: 462px;
-  color: $sect--third__color-main;
+  height: 461px;
+  color: $sect-review__color-main;
   font-weight: $font-weight-light;
   background-color: $color-matterhorn;
   letter-spacing: 0;
 
-  @include __media-breakpoint-up("sm") {
+  @include grid__breakpoint-up("sm") {
     display: block;
   }
 
-  @include __media-breakpoint-up("lg") {
+  @include grid__breakpoint-up("lg") {
     overflow: hidden; // HACK: изображение в ::after вылазит за пределы экрана
   }
 
@@ -30,28 +30,24 @@ $sect--third__color-main: rgba($color-white, 0.35);
     background-size: cover;
     background-position: center;
 
-    @include __media-breakpoint-up("md") {
+    @include grid__breakpoint-up("md") {
       display: initial;
     }
 
-    @include __media-breakpoint-up("lg") {
+    @include grid__breakpoint-up("lg") {
       left: 110px;
     }
   }
 
-  .sect__customer {
+  .sect-customer {
     display: inline-block;
     position: relative;
     width: 104px;
     height: 104px;
     margin-top: 7.15%;
     margin-left: 0.25rem;
-    margin-bottom: 1.15rem;
+    margin-bottom: 1.1rem;
     background-image: url("../img/customer.png");
-
-    // @include __media-breakpoint-up("sm") {
-      
-    // }
 
     &::after {
       content: "";
@@ -60,25 +56,21 @@ $sect--third__color-main: rgba($color-white, 0.35);
       left: -4px;
       width: 112px;
       height: 112px;
-      border: 6px solid $sect--third__color-main;
+      border: 6px solid $sect-review__color-main;
       border-radius: 50%;
-
-      // @include __media-breakpoint-up("sm") {
-      //   display: initial;
-      // }
     }
   }
 
-  .sect__comment {
-    @include __media-breakpoint-up("sm") {
+  .sect-comment {
+    @include grid__breakpoint-up("sm") {
       margin-bottom: 1.5%;
       font-size: 1.85rem;
       line-height: 1.5;
     }
   }
 
-  .sect__caption {
-    @include __media-breakpoint-up("sm") {
+  .sect-caption {
+    @include grid__breakpoint-up("sm") {
       font-size: 1.1rem;
       font-style: italic;
     }

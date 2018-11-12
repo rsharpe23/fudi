@@ -1,4 +1,4 @@
-@mixin sect--fourth__set-background-image() {
+@mixin sect-cuisine__set-background-image() {
   @for $index from 1 through 10 {
     &:nth-child(#{ $index }) {
       background-image: url("../img/cuisine_#{ $index }.png");
@@ -6,134 +6,131 @@
   }
 }
 
-.sect--fourth {
-  .sect__inner {
-    @include __media-breakpoint-up("xl") {
+.sect.-type-cuisine {
+  .sect-inner {
+    @include grid__breakpoint-up("xl") {
       padding-top: 6.1rem;
     }
   }
 
-  .sect__item {
+  .sect-item {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .sect__text {
-    margin: 0;
+  .sect-text {
     @extend .text;
+    margin: 0;
 
-    &--inverted {
-      @extend .text--inverted;
-    }
-
-    &--strong {
+    &.-weight-bold {
       font-weight: $font-weight-bold;
     }
 
-    &--embed {
+    &.-style-italic {
       font-family: $font-family-base;
       font-style: italic;
     }
 
-    &--lead {
+    &.-size-lg {
       letter-spacing: 1.5px;
       text-transform: uppercase;
       font-size: 2.25rem;
 
-      @include __media-breakpoint-up("sm") {
+      @include grid__breakpoint-up("sm") {
         font-size: 1rem;
       }
 
-      @include __media-breakpoint-up("md") {
+      @include grid__breakpoint-up("md") {
         font-size: 1.25rem;
       }
 
-      @include __media-breakpoint-up("lg") {
+      @include grid__breakpoint-up("lg") {
         font-size: 1.75rem;
       }
 
-      @include __media-breakpoint-up("xl") {
+      @include grid__breakpoint-up("xl") {
         font-size: 2.25rem;
       }
     }
   }
 
-  .sect__item-group {
+  .sect-item-group {
     display: flex;
     flex-flow: column wrap;
 
-    @include __media-breakpoint-up("sm") {
+    @include grid__breakpoint-up("sm") {
       flex-direction: row;
     }
 
-    &--first {
+    &:first-of-type {
       padding-top: 1.75rem;
 
-      .sect__item {
+      .sect-item {
         height: 405px;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        @include sect--fourth__set-background-image();
+        @include sect-cuisine__set-background-image();
 
-        @include __media-breakpoint-up("sm") {
+        @include grid__breakpoint-up("sm") {
           flex-basis: 25%;
           width: 25%;
           height: 135px;
         }
 
-        @include __media-breakpoint-up("md") {
+        @include grid__breakpoint-up("md") {
           flex-basis: 20%;
           width: 20%;
           height: 108px;
         }
 
-        @include __media-breakpoint-up("lg") {
+        @include grid__breakpoint-up("lg") {
           height: 140px;
         }
 
-        @include __media-breakpoint-up("xl") {
+        @include grid__breakpoint-up("xl") {
           height: 225px;
         }
       }
 
-      .sect__text-group {
+      .sect-text-group {
         margin-bottom: 1.1rem;
       }
 
-      .sect__text {
+      .sect-text {
+        @extend .text.-type-invert;
         line-height: 1.2;
       }
     }
 
-    &--second {
+    &:last-of-type {
       margin-left: 3.45rem;
       margin-right: 3.45rem;
       margin-bottom: 2.25rem;
       padding-top: 2.25rem;
 
-      @include __media-breakpoint-up("sm") {
+      @include grid__breakpoint-up("sm") {
         margin-bottom: 0;
         padding-top: 0;
       }
 
-      .sect__item {
+      .sect-item {
         padding-top: 2rem;
         padding-bottom: 2rem;
 
-        @include __media-breakpoint-up("sm") {
+        @include grid__breakpoint-up("sm") {
           flex-basis: 33.333%;
         }
 
-        @include __media-breakpoint-up("md") {
+        @include grid__breakpoint-up("md") {
           flex-basis: 20%;
-          padding-top: 2.8rem;
+          padding-top: 2.85rem;
           padding-bottom: 3.5rem;
         }
       }
 
-      .sect__text {
+      .sect-text {
         line-height: 1.45;
       }
     }

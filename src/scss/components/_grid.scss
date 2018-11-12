@@ -1,0 +1,49 @@
+$grid__width:            1170px !default;
+$grid__width:            1210px;
+
+$grid__gutter-width:     15px !default;
+
+$grid__breakpoint-map: (
+  "xs": 0,
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px
+) !default;
+
+@function grid__breakpoint-size($breakpoint-name) {
+  @return map-get($grid__breakpoint-map, $breakpoint-name);
+}
+
+@mixin grid__breakpoint-up($breakpoint-name) {
+  $breakpoint-value: map-get($grid__breakpoint-map, $breakpoint-name);
+
+  @if not $breakpoint-value {
+    @error "Can`t find breakpoint value by key '#{ $breakpoint-name }'";
+  }
+
+  @if $breakpoint-value > 0 {
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
+  } @else if $breakpoint-value == 0 {
+    @content;   
+  } @else {
+    @error "Breakpoint value can`t been less then 0";
+  }
+}
+
+.grid {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: $grid__width;
+  margin-left: auto;
+  margin-right: auto;
+
+  &.-type-gutter {
+    padding-left: $grid__gutter-width;
+    padding-right: $grid__gutter-width;
+  }
+}

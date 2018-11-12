@@ -2,7 +2,7 @@
   background-color: $color-whitesmoke;
   border-top: 1px solid $color-gainsboro;
 
-  &__inner {
+  &-inner {
     display: flex;
     flex-direction: column;
     padding-top: 2rem;
@@ -10,26 +10,26 @@
     text-align: center;
     line-height: 2;
 
-    @include __media-breakpoint-up("sm") {
+    @include grid__breakpoint-up("sm") {
       flex-direction: row;
       justify-content: space-between;
     }
   }
 
-  &__text {
+  &-text {
     color: $color-gray;
     font-weight: $font-weight-light;
     letter-spacing: 0;
 
-    &--lead {
+    &.-type-lead {
       font-weight: $font-weight-normal;
       text-transform: uppercase;
       letter-spacing: 2.6px;
     }
   }
 
-  &__link {
-    @extend .link--inverted;
+  &-link {
+    @extend .link.-type-invert;
     color: $color-darkraven;
   }
 }
