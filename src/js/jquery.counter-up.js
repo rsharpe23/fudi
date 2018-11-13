@@ -36,7 +36,11 @@
     var execute = function fn() {
       setElementTextBy.call(self, count);
 
-      if (count >= totalCount) {
+      if (count == totalCount) {
+        return;
+      }
+
+      if (count > totalCount) {
         setElementTextBy.call(self, totalCount);
         return;
       }
