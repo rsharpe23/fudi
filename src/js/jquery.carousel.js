@@ -82,6 +82,7 @@
     }
 
     var currentIndex = this.itemsModel.current().index();
+    
     if (currentIndex == index) {
       return;
     }
