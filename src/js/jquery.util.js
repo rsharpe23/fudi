@@ -1,19 +1,43 @@
-; (function ($) {
+; (function () {
   'use strict';
 
-  function Transition() { }
+  function UniqueId() {
+    this.count = 0;
+    this.key = 'uuid';
+  }
 
-  Transition.prototype.duration = function (selector, value) {
-    var PROPERTY_NAME = 'transition-duration';
-    var $target = $(selector);
+  UniqueId.prototype.get = function ($element) {
+    var uuid = $element.data(this.key);
+
+    if (!uuid) {
+      $element.data(this.key, uuid = ++this.count);
+    }
+
+    return uuid;
+  };
+
+  window.uniqueId = new UniqueId();
+
+})(jQuery);
+
+(function ($) {
+  'use strict';
+
+  function Transition() {
+    this.property = 'transition-duration';
+  }
+
+  Transition.prototype.duration = function (target, value) {
+    var $target = $(target);
 
     if (!value) {
-      var result = $target.css(PROPERTY_NAME);
+      var result = $target.css(this.property);
       return parseFloat(result) * 1000;
     }
 
-    $target.css(PROPERTY_NAME, value);
+    $target.css(this.property, value);
   };
 
   window.transition = new Transition();
+
 })(jQuery);

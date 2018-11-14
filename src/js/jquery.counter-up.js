@@ -14,9 +14,9 @@
     beginAt: 0
   };
 
-  CounterUp.getEvent = function (name) {
-    return name + '.' + CounterUp.DEFAULTS.namespace;
-  };
+  // CounterUp.getEvent = function (name) {
+  //   return name + '.' + CounterUp.DEFAULTS.namespace;
+  // };
 
   CounterUp.prototype.run = function () {
     var self = this;
@@ -62,10 +62,8 @@
     switch (separator) {
       case 'dot':
         return '.';
-
       case 'comma':
         return ',';
-
       default:
         return null;
     }
@@ -108,12 +106,18 @@
     return this;
   };
 
-  var loadEvent = CounterUp.getEvent('load');
-
-  $(window).on(loadEvent, function () {
-    $('.js-counter-up').each(function () {
-      Plugin.call($(this), { separator: 'comma' });
+  $(document).ready(function () {
+    $('.js-waypoint.js-counter-up').one('stay.fudi.waypoint', function () {
+      $(this).counterUp({ separator: 'comma' });
     });
   });
+
+  // var loadEvent = CounterUp.getEvent('load');
+
+  // $(window).on(loadEvent, function () {
+  //   $('.js-counter-up').each(function () {
+  //     Plugin.call($(this), { separator: 'comma' });
+  //   });
+  // });
 
 })(jQuery);
