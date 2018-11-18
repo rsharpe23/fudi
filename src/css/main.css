@@ -531,8 +531,13 @@ body {
   }
 }
 
+.sect.-type-app .sect-item:first-child {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .sect.-type-app .sect-item:first-child {
+    display: block;
     -webkit-flex-basis: 45%;
         -ms-flex-preferred-size: 45%;
             flex-basis: 45%;
@@ -540,7 +545,6 @@ body {
 }
 
 .sect.-type-app .sect-iphone {
-  display: none;
   position: relative;
   width: 100%;
   height: 100%;
@@ -549,12 +553,6 @@ body {
           background-size: contain;
   background-position: bottom;
   background-repeat: no-repeat;
-}
-
-@media (min-width: 768px) {
-  .sect.-type-app .sect-iphone {
-    display: block;
-  }
 }
 
 .sect.-type-app .sect-iphone::after {

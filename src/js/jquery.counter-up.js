@@ -10,43 +10,39 @@
     namespace: 'fudi.counter-up',
     separator: false,
     duration: 5000,
-    minDelay: 50,
     beginAt: 0
   };
-
-  // CounterUp.getEvent = function (name) {
-  //   return name + '.' + CounterUp.DEFAULTS.namespace;
-  // };
 
   CounterUp.prototype.run = function () {
     var self = this;
 
     var count = this.options.beginAt;
-    var totalCount = this.$element.data('total');
+    var total = this.$element.data('count');
 
-    var fnDelay = this.options.duration / totalCount;
-    var minDelay = this.options.minDelay;
+    var MIN_REFRESH_RATE = 50;
+
+    var refreshRate = this.options.duration / total;
     var offset = 1;
 
-    if (fnDelay < minDelay) {
-      offset = Math.round(minDelay / fnDelay);
-      fnDelay = minDelay;
+    if (refreshRate < MIN_REFRESH_RATE) {
+      offset = Math.round(MIN_REFRESH_RATE / refreshRate);
+      refreshRate = MIN_REFRESH_RATE;
     }
 
     var execute = function fn() {
       setElementTextBy.call(self, count);
 
-      if (count == totalCount) {
+      if (count == total) {
         return;
       }
 
-      if (count > totalCount) {
-        setElementTextBy.call(self, totalCount);
+      if (count > total) {
+        setElementTextBy.call(self, total);
         return;
       }
 
       count += offset;
-      setTimeout(fn, fnDelay);
+      setTimeout(fn, refreshRate);
     };
 
     execute();
@@ -106,18 +102,8 @@
     return this;
   };
 
-  $(document).ready(function () {
-    $('.js-waypoint.js-counter-up').one('stay.fudi.waypoint', function () {
-      $(this).counterUp({ separator: 'comma' });
-    });
+  $('.js-counter-up.js-waypoint').one('stay.fudi.waypoint', function () {
+    $(this).counterUp({ separator: 'comma' });
   });
-
-  // var loadEvent = CounterUp.getEvent('load');
-
-  // $(window).on(loadEvent, function () {
-  //   $('.js-counter-up').each(function () {
-  //     Plugin.call($(this), { separator: 'comma' });
-  //   });
-  // });
 
 })(jQuery);
