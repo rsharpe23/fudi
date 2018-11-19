@@ -331,19 +331,13 @@ body {
 }
 
 .header-arrow {
-  display: none;
+  display: inline-block;
   position: absolute;
   left: 0;
   right: 0;
   bottom: 40px;
   -webkit-animation: ping-pong 2s infinite;
           animation: ping-pong 2s infinite;
-}
-
-@media (min-width: 576px) {
-  .header-arrow {
-    display: inline-block;
-  }
 }
 
 .nav-link {

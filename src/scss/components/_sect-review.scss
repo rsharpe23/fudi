@@ -31,7 +31,8 @@ $sect-review__color-main: rgba($color-white, 0.35);
     background-position: center;
 
     @include grid__breakpoint-up("md") {
-      display: initial;
+      // display: initial;
+      display: inline;
     }
 
     @include grid__breakpoint-up("lg") {

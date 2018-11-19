@@ -31,7 +31,8 @@ $header__max-height: grid__breakpoint-size("lg");
     background-image: url("../img/fudi_gradient.png");
 
     @include grid__breakpoint-up("sm") {
-      display: initial;
+      // display: initial;
+      display: inline;
     }
   }
 
@@ -90,15 +91,16 @@ $header__max-height: grid__breakpoint-size("lg");
   }
 
   &-arrow {
-    display: none;
+    // display: none;
+    display: inline-block;
     position: absolute;
     left: 0;
     right: 0;
     bottom: 40px;
     animation: ping-pong 2s infinite;
 
-    @include grid__breakpoint-up("sm") {
-      display: inline-block;
-    }
+    // @include grid__breakpoint-up("sm") {
+    //   display: inline-block;
+    // }
   }
 }
