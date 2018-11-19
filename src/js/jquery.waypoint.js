@@ -32,16 +32,18 @@
 
     // elemTop/elemBottom могут менятся динамический, 
     // поэтому обновляем их в кажом событии прокрутки
+    
     // var elemTop = this.$element.position().top; // Позиция относительно родителя
     var elemTop = this.$element.offset().top; // Позиция относительно документа
     var elemBottom = elemTop + this.$element.outerHeight();
+    var elemOffset = getHeightOffset.call(this);
 
     if (scrollTop > this.lastScrollTop) {
-      if (scrollBottom > elemTop + getOffsetHeight.call(this) && scrollBottom < elemBottom) {
+      if (scrollBottom > (elemTop + elemOffset) && scrollBottom < elemBottom) {
         ready.call(this);
       }
     } else {
-      if (scrollTop < elemBottom - getOffsetHeight.call(this) && scrollTop > elemTop) {
+      if (scrollTop < (elemBottom - elemOffset) && scrollTop > elemTop) {
         ready.call(this);
       }
     }
@@ -62,7 +64,7 @@
     this.$element.trigger(e);
   }
 
-  function getOffsetHeight() {
+  function getHeightOffset() {
     var value = parseInt(this.options.offset);
     return this.$element.outerHeight() / 100 * value;
   }

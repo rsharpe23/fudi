@@ -42,7 +42,7 @@
 
     setAnim.apply(this, animArr);
   }
- 
+
   function setAnim(name, delay) {
     this.$element.addClass(['animated', name].join(' '));
     setAnimDelay.call(this, delay);
@@ -95,7 +95,5 @@
 
     $this.animateCss(anim, { delay: delay });
   });
-
-
 
 })(jQuery);
