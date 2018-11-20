@@ -14,13 +14,12 @@ $sect-review__color-main: rgba($color-white, 0.35);
     display: block;
   }
 
-  @include grid__breakpoint-up("lg") {
-    overflow: hidden; // HACK: изображение в ::after вылазит за пределы экрана
-  }
+  // @include grid__breakpoint-up("lg") {
+  //   overflow: hidden; // HACK: изображение в ::after вылазит за пределы экрана
+  // }
 
   &::after {
-    display: none;
-    content: "";
+    content: none;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -28,16 +27,18 @@ $sect-review__color-main: rgba($color-white, 0.35);
     height: 100%;
     background-image: url("../img/housewife.png");
     background-size: cover;
-    background-position: center;
+    background-repeat: no-repeat;
+    // background-position: center;
+    background-position: 33.333% 50%;
+    background-attachment: fixed;
 
     @include grid__breakpoint-up("md") {
-      // display: initial;
-      display: inline;
+      content: "";
     }
 
-    @include grid__breakpoint-up("lg") {
-      left: 110px;
-    }
+    // @include grid__breakpoint-up("lg") {
+    //   left: 110px;
+    // }
   }
 
   .sect-customer {

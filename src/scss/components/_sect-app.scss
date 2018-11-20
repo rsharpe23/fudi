@@ -18,7 +18,6 @@
   }
 
   .sect-iphone {
-    // display: none;
     position: relative;
     width: 100%;
     height: 100%;
@@ -26,10 +25,6 @@
     background-size: contain;
     background-position: bottom;
     background-repeat: no-repeat;
-
-    // @include grid__breakpoint-up("md") {
-    //   display: block;
-    // }
 
     &::after {
       content: "";
@@ -41,6 +36,11 @@
       background-size: contain;
       background-repeat: repeat-x;
       background-image: url("../img/mobile_app_gradient.png");
+
+      // HACK: отключаем тень в MS EDGE, т.к. в нем она некорректно отображается
+      @supports (-ms-ime-align: auto) {
+        content: none;
+      }
     }
   }
 

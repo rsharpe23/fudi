@@ -224,7 +224,7 @@ body {
   height: 100vh;
   background-color: #493949;
   background-image: url("../img/fudi.jpg");
-  background-position: center;
+  background-attachment: fixed;
   -webkit-background-size: cover;
           background-size: cover;
   text-align: center;
@@ -238,8 +238,7 @@ body {
 }
 
 .header::after {
-  display: none;
-  content: "";
+  content: none;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -251,7 +250,7 @@ body {
 
 @media (min-width: 576px) {
   .header::after {
-    display: initial;
+    content: "";
   }
 }
 
@@ -349,7 +348,7 @@ body {
 
 @media (min-width: 768px) {
   .nav-link {
-    display: initial;
+    display: inline;
   }
 }
 
@@ -562,6 +561,12 @@ body {
   background-image: url("../img/mobile_app_gradient.png");
 }
 
+@supports (-ms-ime-align: auto) {
+  .sect.-type-app .sect-iphone::after {
+    content: none;
+  }
+}
+
 @media (min-width: 768px) {
   .sect.-type-app .sect-item:last-child {
     -webkit-flex-basis: 45.815%;
@@ -618,15 +623,8 @@ body {
   }
 }
 
-@media (min-width: 992px) {
-  .sect.-type-review {
-    overflow: hidden;
-  }
-}
-
 .sect.-type-review::after {
-  display: none;
-  content: "";
+  content: none;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -635,18 +633,14 @@ body {
   background-image: url("../img/housewife.png");
   -webkit-background-size: cover;
           background-size: cover;
-  background-position: center;
+  background-repeat: no-repeat;
+  background-position: 33.333% 50%;
+  background-attachment: fixed;
 }
 
 @media (min-width: 768px) {
   .sect.-type-review::after {
-    display: initial;
-  }
-}
-
-@media (min-width: 992px) {
-  .sect.-type-review::after {
-    left: 110px;
+    content: "";
   }
 }
 

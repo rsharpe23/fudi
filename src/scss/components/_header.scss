@@ -10,7 +10,8 @@ $header__max-height: grid__breakpoint-size("lg");
   // height: 880px;
   background-color: $color-matterhorn;
   background-image: url("../img/fudi.jpg");
-  background-position: center;
+  background-attachment: fixed;
+  // background-position: center;
   background-size: cover;
   text-align: center;
 
@@ -20,8 +21,7 @@ $header__max-height: grid__breakpoint-size("lg");
   }
 
   &::after {
-    display: none;
-    content: "";
+    content: none;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -31,8 +31,7 @@ $header__max-height: grid__breakpoint-size("lg");
     background-image: url("../img/fudi_gradient.png");
 
     @include grid__breakpoint-up("sm") {
-      // display: initial;
-      display: inline;
+      content: "";
     }
   }
 
@@ -91,16 +90,11 @@ $header__max-height: grid__breakpoint-size("lg");
   }
 
   &-arrow {
-    // display: none;
     display: inline-block;
     position: absolute;
     left: 0;
     right: 0;
     bottom: 40px;
     animation: ping-pong 2s infinite;
-
-    // @include grid__breakpoint-up("sm") {
-    //   display: inline-block;
-    // }
   }
 }
