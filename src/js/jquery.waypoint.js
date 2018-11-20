@@ -26,7 +26,7 @@
     return $element.css('display') != 'none';
   }
 
-  Waypoint.prototype.run = function (e) {
+  Waypoint.prototype.run = function () {
     var scrollTop = this.$root.scrollTop();
     var scrollBottom = scrollTop + window.innerHeight;
 

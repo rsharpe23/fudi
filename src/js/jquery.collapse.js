@@ -1,22 +1,18 @@
 ; (function ($) {
   'use strict';
 
-  function Collapse($element, options) {
-    this.$element = $element;
-    this.options = options;
-  }
+  function Collapse($element, options) {}
 
-  Collapse.DEFAULTS = { 
-    namespace: 'fudi.collapse' 
+  Collapse.DEFAULTS = {
+    namespace: 'fudi.collapse'
   };
 
-  Collapse.getEvent = function (name) {
-    return name + '.' + Collapse.DEFAULTS.namespace;
+  Collapse.getEvent = function () {
+    return [].join.call(arguments, '.') + '.' + Collapse.DEFAULTS.namespace;
   };
 
-  Collapse.prototype.toggle = function () {
-    var $target = $(this.$element.data('target') || this.$element.attr('href'));
-    $target.slideToggle();
+  Collapse.prototype.toggle = function (target) {
+    $(target).slideToggle();
   };
 
 
@@ -28,11 +24,10 @@
       var instance = $this.data(namespace);
 
       if (!instance) {
-        var options = $.extend({}, Collapse.DEFAULTS, typeof param == 'object' && param);
-        $this.data(namespace, instance = new Collapse($this, options));
+        $this.data(namespace, instance = new Collapse());
       }
 
-      instance.toggle();
+      instance.toggle(param);
     });
   }
 
@@ -47,13 +42,15 @@
   };
 
 
-  var dataApiEvent = Collapse.getEvent('click');
+  var clickEvent = Collapse.getEvent('click');
 
-  $(document).on(dataApiEvent, '.js-collapse-toggle', function (e) {
-    var $context = $(this);
-    Plugin.call($context);
+  $(document).on(clickEvent, '.js-collapse-toggle', function (e) {
+    var $this = $(this);
 
-    if ($context.is('a')) {
+    var param = $this.data('target') || $this.attr('href');
+    $this.collapse(param);
+
+    if ($this.is('a')) {
       e.preventDefault();
     }
   });

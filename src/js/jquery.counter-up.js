@@ -13,14 +13,12 @@
     beginAt: 0
   };
 
-  CounterUp.prototype.run = function () {
+  CounterUp.prototype.run = function (total) {
     var self = this;
-
-    var count = this.options.beginAt;
-    var total = this.$element.data('count');
 
     var MIN_REFRESH_RATE = 50;
 
+    var count = this.options.beginAt;
     var refreshRate = this.options.duration / total;
     var offset = 1;
 
@@ -76,19 +74,22 @@
     return str.replace(pattern, value);
   }
 
-  function Plugin(param) {
+  function Plugin(param, options) {
     var namespace = CounterUp.DEFAULTS.namespace;
+    var newOptions = $.extend({}, CounterUp.DEFAULTS, typeof options == 'object' && options);
 
     return this.each(function () {
       var $this = $(this);
       var instance = $this.data(namespace);
 
-      if (!instance) {
-        var options = $.extend({}, CounterUp.DEFAULTS, typeof param == 'object' && param);
-        $this.data(namespace, instance = new CounterUp($this, options));
+      if (instance) {
+        instance.options = newOptions;
+      } else {
+        instance = new CounterUp($this, newOptions);
+        $this.data(namespace, instance);
       }
 
-      instance.run();
+      instance.run(param);
     });
   }
 
@@ -103,7 +104,9 @@
   };
 
   $('.js-counter-up.js-waypoint').one('stay.fudi.waypoint', function () {
-    $(this).counterUp({ separator: 'comma' });
+    var $this = $(this);
+    var param = $this.data('count');
+    $this.counterUp(param, { separator: 'comma' });
   });
 
 })(jQuery);

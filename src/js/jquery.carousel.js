@@ -23,8 +23,8 @@
     interval: 3000
   };
 
-  Carousel.getEvent = function (name) {
-    return name + '.' + Carousel.DEFAULTS.namespace;
+  Carousel.getEvent = function () {
+    return [].join.call(arguments, '.') + '.' + Carousel.DEFAULTS.namespace;
   }
 
   Carousel.prototype.start = function () {
@@ -82,7 +82,7 @@
     }
 
     var currentIndex = this.itemsModel.current().index();
-    
+
     if (currentIndex == index) {
       return;
     }
@@ -107,7 +107,7 @@
 
     var $currentPoint = this.pointsModel.current();
     var $currentItem = this.itemsModel.current();
-    
+
     $currentItem.addClass(dirClassName);
     $newItem.addClass(dirClassName);
 
@@ -178,22 +178,25 @@
   };
 
 
-  function Plugin(option) {
+  function Plugin(param, options) {
     var namespace = Carousel.DEFAULTS.namespace;
+    var newOptions = $.extend({}, Carousel.DEFAULTS, typeof options == 'object' && options);
 
     return this.each(function () {
       var $this = $(this);
       var instance = $this.data(namespace);
 
-      if (!instance) {
-        var options = $.extend({}, Carousel.DEFAULTS, typeof option == 'object' && option);
-        $this.data(namespace, instance = new Carousel($this, options));
+      if (instance) {
+        instance.options = newOptions;
+      } else {
+        instance = new Carousel($this, newOptions);
+        $this.data(namespace, instance);
       }
 
-      if (typeof option == 'string') {
-        instance[option]();
-      } else if (typeof option == 'number') {
-        instance.to(option);
+      if (typeof param == 'string') {
+        instance[param]();
+      } else if (typeof param == 'number') {
+        instance.to(param);
       } else {
         instance.start();
       }
@@ -217,9 +220,9 @@
     var $this = $(this);
 
     var $context = $this.closest('.js-carousel');
-    var option = $this.data('slide') || +$this.attr('data-index');
+    var param = $this.data('slide') || +$this.attr('data-index');
 
-    Plugin.call($context, option);
+    $context.carousel(param);
 
     if ($this.is('a')) {
       e.preventDefault();
@@ -234,9 +237,7 @@
   var loadEvent = Carousel.getEvent('load');
 
   $(window).on(loadEvent, function () {
-    $('.js-carousel').each(function () {
-      Plugin.call($(this));
-    });
+    $('.js-carousel').carousel();
   });
 
 })(jQuery);
