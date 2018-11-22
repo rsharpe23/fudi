@@ -87,7 +87,7 @@
     return this;
   };
 
-  $('.js-animate.js-waypoint').one('stay.fudi.waypoint', function () {
+  $('.js-animate.js-waypoint').one('ready.fudi.waypoint', function () {
     var $this = $(this);
 
     var anim = $this.data('anim');

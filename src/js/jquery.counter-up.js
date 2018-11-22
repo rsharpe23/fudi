@@ -103,7 +103,7 @@
     return this;
   };
 
-  $('.js-counter-up.js-waypoint').one('stay.fudi.waypoint', function () {
+  $('.js-counter-up.js-waypoint').one('ready.fudi.waypoint', function () {
     var $this = $(this);
     var param = $this.data('count');
     $this.counterUp(param, { separator: 'comma' });
